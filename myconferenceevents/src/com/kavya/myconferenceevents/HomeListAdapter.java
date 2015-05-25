@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -99,7 +100,7 @@ public class HomeListAdapter extends BaseAdapter{
 		}
 		
 		/** updating the ui components with actual values */
-		viewHolder.mName.setText(data.getName());
+		viewHolder.mName.setText(Html.fromHtml(data.getName()));
 		viewHolder.mDuration.setText(data.getDuration()+" min");
 		viewHolder.mPresenter.setText(data.getPresenter());
 		viewHolder.mRoom.setText(data.getRoom());

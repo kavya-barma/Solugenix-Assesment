@@ -11,5 +11,7 @@
     <dimen name="headertitlefontsize">18sp</dimen>
     <dimen name="headeractionfontsize">14sp</dimen>
     <dimen name="tableitemtextsize">12sp</dimen>
+    <dimen name="tableitemnamefontsize">11sp</dimen>
+    <dimen name="webviewfontsize">12sp</dimen>
 
 </resources>

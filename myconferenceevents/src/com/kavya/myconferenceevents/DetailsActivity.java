@@ -22,10 +22,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.webkit.WebSettings;
+import android.webkit.WebSettings.TextSize;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -84,7 +86,7 @@ public class DetailsActivity extends Activity {
     	try {
     		// updating the title
 			Utils.setRegularFont(findViewById(R.id.title), this);
-			((TextView)findViewById(R.id.title)).setText(mData.getName());
+			((TextView)findViewById(R.id.title)).setText(Html.fromHtml(mData.getName()));
 			
 			// toggling the label of action button
 			if(mData.isSubscribed() == 0){
@@ -139,8 +141,10 @@ public class DetailsActivity extends Activity {
 			Biography = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><body>"+Biography+"</body>";
 			WebView webview = (WebView) profile.findViewById(R.id.about);
 			WebSettings webSettings = webview.getSettings();
-			webSettings.setDefaultFixedFontSize(12);
+			webSettings.setDefaultFixedFontSize((int) getResources().getDimension(R.dimen.webviewfontsize));
+			webSettings.setTextSize(TextSize.SMALLER);
 			webview.loadData(Biography, "text/html", "UTF-8");
+			
 			
 			
 			String ImageUrl = Utils.getStringSubValue("MainPresenter", "ImageUrl", object);
@@ -188,7 +192,8 @@ public class DetailsActivity extends Activity {
 			Abstract = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><body>"+Abstract+"</body>";
 			WebView webview = (WebView) desc.findViewById(R.id.desc);
 			WebSettings webSettings = webview.getSettings();
-			webSettings.setDefaultFixedFontSize(12);
+			webSettings.setDefaultFixedFontSize((int) getResources().getDimension(R.dimen.webviewfontsize));
+			webSettings.setTextSize(TextSize.SMALLER);
 			webview.loadData(Abstract, "text/html", "UTF-8");
 			
 			// preparing the twitter link
