@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/profilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/separater"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/profilename"
+        android:layout_margin="4dp"
+        android:background="@android:color/darker_gray" />
+
+    <ImageView
+        android:contentDescription="@string/twittericon"
+        android:id="@+id/twitter"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:padding="8dp"
+        android:src="@drawable/twitter" />
+
+    <ImageView
+        android:contentDescription="@string/profileicon"
+        android:id="@+id/profilepic"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/separater"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/no_image_available_male" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilepic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/userid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/email"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/lastlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/email"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/lastloginseparater"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/lastlogin"
+        android:layout_margin="4dp"
+        android:background="@android:color/darker_gray" />
+
+    <WebView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastloginseparater"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+</RelativeLayout>

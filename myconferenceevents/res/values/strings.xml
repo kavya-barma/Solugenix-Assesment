@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">myconferenceevents</string>
+    <string name="applicationicon">application</string>
+    <string name="twittericon">Twitter</string>
+    <string name="profileicon">Profile</string>
+    <string name="list_label_id">Id</string>
+    <string name="list_label_name">Name</string>
+    <string name="list_label_Presenter">Presenter</string>
+    <string name="list_label_Duration">Duration</string>
+    <string name="list_label_Room">Room</string>
+    <string name="label_SavedSessions">My Saved Sessions</string>
+    <string name="label_LatestSessions">Latest Sessions</string>
+    <string name="label_Bookmark">Bookmark</string>
+    <string name="label_Unbookmark">Un-Bookmark</string>
+	<string name="label_NoResults">No results found</string>
+	<string name="label_ProgressText">Updating list.Please wait!</string>
+</resources>
